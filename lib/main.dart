@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,95 +23,38 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[500],
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.all(5),
-                color: Colors.blue,
-                width: 100,
-                child: Center(
-                  child: Text("Where"),
-                )
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.all(10),
+              padding: EdgeInsets.all(5),
+              color: Colors.red,
+              child: Text(
+                "Hello",
+                style: TextStyle(color: Colors.black),
               ),
-              Container(
-                color: Colors.blue,
-                padding: EdgeInsets.all(5),
-                width: 100,
-                child: Center(
-                  child: Text("Where"),
-                )
+            ),
+          ),
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.all(10),
+              padding: EdgeInsets.all(5),
+              color: Colors.white,
+              child: Text(
+                "Dear",
+                style: TextStyle(color: Colors.black),
               ),
-              Container(
-                color: Colors.purple,
-                padding: EdgeInsets.all(5),
-                width: 100,
-                child: Center(
-                  child: Text("Where"),
-                )
-              )
-            ],
+            ),
           ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.amber,
-                  width: 100,
-                  child: Center(
-                    child: Text("Where"),
-                  )
-                ),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.cyanAccent,
-                  width: 100,
-                  child: Center(
-                    child: Text("Where"),
-                  )
-                ),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.deepOrange,
-                  width: 100,
-                  child: Center(
-                    child: Text("Where"),
-                  )
-                )
-              ]
-          ),
-          Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.red,
-                  width: 100,
-                  child: Center(
-                    child: Text("Where"),
-                  )
-                ),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.white,
-                  width: 100,
-                  child: Center(
-                    child: Text("Where"),
-                  )
-                ),
-                Container(
-                  padding: EdgeInsets.all(5),
-                  color: Colors.red,
-                  width: 100,
-                  child: Center(
-                    child: Text("Where"),
-                  )
-                )
-              ]
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.all(10),
+              padding: EdgeInsets.all(5),
+              color: Colors.red,
+              child: Text(username, style: TextStyle(color: Colors.black),),
+            ),
           ),
         ],
       ),
