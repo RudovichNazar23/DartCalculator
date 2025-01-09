@@ -24,14 +24,7 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          "Hello $username",
-          style: TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontFamily: "NotoSansNewa"
-          ),
-        ),
+        child: Image.network("https://starwalk.space/gallery/images/what-is-space/1140x641.jpg")
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[500],
