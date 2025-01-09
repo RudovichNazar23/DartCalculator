@@ -24,11 +24,23 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Image.network("https://starwalk.space/gallery/images/what-is-space/1140x641.jpg")
+        child: TextButton.icon(
+            onPressed: () {
+              print("Searching...");
+            },
+            label: Text("Search"),
+            icon: Icon(
+              Icons.search,
+              color: Colors.purple[500],
+              size: 30,
+            ),
+        )
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[500],
-        onPressed:  () {},
+        onPressed:  () {
+          print("Clicked red button");
+        },
         child: Text(
           "Button",
           style: TextStyle(
