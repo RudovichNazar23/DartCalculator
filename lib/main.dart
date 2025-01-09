@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,24 +25,96 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[500],
         centerTitle: true,
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget> [
-          Container(
-            color: Colors.amber,
-            padding: EdgeInsets.all(5),
-            child: Text("Hello $username", style: TextStyle(color: Colors.black),),
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(5),
+                color: Colors.blue,
+                width: 100,
+                child: Center(
+                  child: Text("Where"),
+                )
+              ),
+              Container(
+                color: Colors.blue,
+                padding: EdgeInsets.all(5),
+                width: 100,
+                child: Center(
+                  child: Text("Where"),
+                )
+              ),
+              Container(
+                color: Colors.purple,
+                padding: EdgeInsets.all(5),
+                width: 100,
+                child: Center(
+                  child: Text("Where"),
+                )
+              )
+            ],
           ),
-          TextButton(
-            onPressed: () {},
-            child: Text("Click", style: TextStyle(color: Colors.black,)),
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.amber,
+                  width: 100,
+                  child: Center(
+                    child: Text("Where"),
+                  )
+                ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.cyanAccent,
+                  width: 100,
+                  child: Center(
+                    child: Text("Where"),
+                  )
+                ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.deepOrange,
+                  width: 100,
+                  child: Center(
+                    child: Text("Where"),
+                  )
+                )
+              ]
           ),
-          Container(
-            color: Colors.blue,
-            padding: EdgeInsets.all(5),
-            child: Text("Container", style: TextStyle(color: Colors.white),),
-          )
+          Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.red,
+                  width: 100,
+                  child: Center(
+                    child: Text("Where"),
+                  )
+                ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.white,
+                  width: 100,
+                  child: Center(
+                    child: Text("Where"),
+                  )
+                ),
+                Container(
+                  padding: EdgeInsets.all(5),
+                  color: Colors.red,
+                  width: 100,
+                  child: Center(
+                    child: Text("Where"),
+                  )
+                )
+              ]
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
