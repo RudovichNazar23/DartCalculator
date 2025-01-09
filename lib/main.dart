@@ -23,18 +23,11 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[500],
         centerTitle: true,
       ),
-      body: Center(
-        child: TextButton.icon(
-            onPressed: () {
-              print("Searching...");
-            },
-            label: Text("Search"),
-            icon: Icon(
-              Icons.search,
-              color: Colors.purple[500],
-              size: 30,
-            ),
-        )
+      body: Container(
+        color: Colors.black,
+        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        margin: EdgeInsets.all(15),
+        child: Text("Hello", style: TextStyle(color: Colors.white),),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[500],
