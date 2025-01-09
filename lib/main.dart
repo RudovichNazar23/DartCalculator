@@ -23,12 +23,31 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.red[500],
         centerTitle: true,
       ),
-      body: Center(
-        child: Image.network("https://starwalk.space/gallery/images/what-is-space/1140x641.jpg")
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget> [
+          Container(
+            color: Colors.amber,
+            padding: EdgeInsets.all(5),
+            child: Text("Hello $username", style: TextStyle(color: Colors.black),),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: Text("Click", style: TextStyle(color: Colors.black,)),
+          ),
+          Container(
+            color: Colors.blue,
+            padding: EdgeInsets.all(5),
+            child: Text("Container", style: TextStyle(color: Colors.white),),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red[500],
-        onPressed:  () {},
+        onPressed:  () {
+          print("Clicked red button");
+        },
         child: Text(
           "Button",
           style: TextStyle(
