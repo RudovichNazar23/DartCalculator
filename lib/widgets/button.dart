@@ -14,11 +14,13 @@ class Button extends StatelessWidget {
   final String textValue;
   final Color buttonColor;
   final int flex;
+  final Function setValue;
 
   const Button(
       this.textValue,
       this.buttonColor,
       this.flex,
+      this.setValue,
       {super.key}
   );
 
@@ -29,7 +31,7 @@ class Button extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.all(5),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () => setValue(textValue),
           style: TextButton.styleFrom(
             backgroundColor: buttonColor,
           ),
