@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:math_expressions/math_expressions.dart';
 import 'widgets/button.dart' show Button;
 import 'widgets/button_container.dart' show ButtonContainer;
 
@@ -33,6 +34,18 @@ class _HomeState extends State<Home> {
   void removeAllChars (dynamic args) {
     setState(() {
       fieldValue = "";
+    });
+  }
+
+  void getResult(String expression) {
+    Parser p = Parser();
+    Expression exp = p.parse(fieldValue);
+    ContextModel contextModel = ContextModel();
+
+    num eval = exp.evaluate(EvaluationType.REAL, contextModel);
+    String result = eval.toString();
+    setState(() {
+      fieldValue = result;
     });
   }
 
@@ -89,7 +102,7 @@ class _HomeState extends State<Home> {
                           [
                             Button("AC", Colors.grey, 4, removeAllChars),
                             Button("⌫", Colors.grey, 4, removeLastChar),
-                            Button("=", Colors.grey, 4, setFieldValue)
+                            Button("=", Colors.grey, 4, getResult)
                           ]
                       ),
                       ButtonContainer(
